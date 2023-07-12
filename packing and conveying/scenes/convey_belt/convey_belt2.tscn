@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://packing and conveying/scenes/convey_belt/convey_belt.gd" type="Script" id=1]
+[ext_resource path="res://packing and conveying/images/Untitled71_20230621082654.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 510.5, 12 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="convey_belt" type="KinematicBody2D" groups=["convey_belt"]]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 307.5, -2 )
+shape = SubResource( 4 )
+
+[node name="Area2D_left" type="Area2D" parent="."]
+position = Vector2( -200, -23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_left"]
+position = Vector2( 88, 0 )
+shape = SubResource( 2 )
+
+[node name="Area2D_right" type="Area2D" parent="."]
+position = Vector2( 200, -23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_right"]
+shape = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 258.551, 32 )
+scale = Vector2( 6.89697, 1 )
+color = Color( 0.454902, 0.345098, 0.219608, 1 )
+polygon = PoolVector2Array( -81, -13, 82.5651, -13, 83, 9, -82, 9 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2( -504, 0 )
+color = Color( 0.360687, 0.253425, 0.151312, 1 )
+polygon = PoolVector2Array( 195, 40, 237, -20, 246, -22, 209, 40 )
+
+[node name="bearing2" type="Sprite" parent="."]
+modulate = Color( 0.665527, 0.663512, 0.659272, 1 )
+position = Vector2( -301.01, 31.6533 )
+scale = Vector2( 0.031276, 0.031276 )
+texture = ExtResource( 3 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( -168.196, 32 )
+scale = Vector2( 2.91057, 1 )
+color = Color( 0.819608, 0.705882, 0.466667, 1 )
+polygon = PoolVector2Array( -34.1676, -54, 319.277, -54, 341.581, -13, -47.3461, -13 )
+
+[connection signal="body_entered" from="Area2D_left" to="." method="_on_Area2D_left_body_entered"]
+[connection signal="body_entered" from="Area2D_right" to="." method="_on_Area2D_right_body_entered"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ATM Bank Queue/scenes/atm machine/ATM machine.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ATM Bank Queue/scenes/person/Person.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ATM Bank Queue/scenes/queue/queue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ATM Bank Queue/scenes/simulation/simulation.gd" type="Script" id=4]
+[ext_resource path="res://ATM Bank Queue/images/pngwing.com (12).png" type="Texture" id=5]
+[ext_resource path="res://ATM Bank Queue/scenes/spawner/spawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://packing and conveying/Helvetica 700_WhatsApp.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 7 )
+
+[node name="simulation" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="bg_image" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.827451 )
+position = Vector2( 626.604, 187 )
+scale = Vector2( 1.14583, 1.14583 )
+texture = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -404.0
+margin_top = 624.0
+margin_right = 1783.0
+margin_bottom = 901.0
+color = Color( 0.427451, 0.745098, 0.113725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ATM machine" parent="." instance=ExtResource( 1 )]
+position = Vector2( 449, 530 )
+
+[node name="queue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 695, 706 )
+
+[node name="Person" parent="." instance=ExtResource( 2 )]
+position = Vector2( 774, 579 )
+
+[node name="Person2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 870, 579 )
+
+[node name="Person3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 974, 579 )
+
+[node name="spawner" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1317, 526 )
+resource = ExtResource( 2 )
+wait_time = 3
+
+[node name="back" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.266667 )
+margin_right = 12.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 1 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

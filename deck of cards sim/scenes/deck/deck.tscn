@@ -1,0 +1,423 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://deck of cards sim/scenes/deck/deck.gd" type="Script" id=1]
+[ext_resource path="res://deck of cards sim/images/Clubs-88x124.png" type="Texture" id=2]
+[ext_resource path="res://deck of cards sim/images/Card_Back-88x124.png" type="Texture" id=3]
+[ext_resource path="res://deck of cards sim/Helvetica 700_WhatsApp.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 88, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 88, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 176, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 264, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 352, 0, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 124, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 88, 124, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 176, 124, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 264, 124, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 352, 124, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 248, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 88, 248, 88, 124 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 176, 248, 88, 124 )
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("clubs:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 80, 72 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("clubs:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("clubs:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("clubs2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("clubs2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 80, 104 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("clubs2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("clubs2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "end_of_deck"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("clubs:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5 ),
+"transitions": PoolRealArray( 2.74283, 7.739, 2.74283, 7.739, 2.74283, 7.739, 2.74283, 7.739, 2.74283, 7.739, 2.74283 ),
+"update": 0,
+"values": [ Vector2( 80, 72 ), Vector2( 96, 72 ), Vector2( 80, 72 ), Vector2( 64, 72 ), Vector2( 80, 72 ), Vector2( 96, 72 ), Vector2( 80, 72 ), Vector2( 64, 72 ), Vector2( 80, 72 ), Vector2( 96, 72 ), Vector2( 80, 72 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("clubs:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "picked_animation"
+tracks/0/type = "value"
+tracks/0/path = NodePath("clubs:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 80, 0 ), Vector2( 79.6667, 69.3333 ), Vector2( 80, 104 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("clubs:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.0573437 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("clubs:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("clubs2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "throw_card_1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("clubs2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("clubs2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 80, 104 ), Vector2( -40, 16 ), Vector2( -208, -64 ), Vector2( -312, -64 ), Vector2( -472, -16 ), Vector2( -568, 104 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("clubs2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.0, -59.9999, -120.0, -165.0, -225.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("clubs2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 0.161732 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=21]
+size = 26
+font_data = ExtResource( 4 )
+
+[node name="deck" type="Control"]
+margin_left = -80.0
+margin_top = -72.0
+margin_right = 77.0
+margin_bottom = 81.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hidden_card" type="Sprite" parent="."]
+position = Vector2( 80, 72 )
+texture = SubResource( 14 )
+
+[node name="clubs" type="Node2D" parent="."]
+visible = false
+position = Vector2( 80, 72 )
+
+[node name="Ace" type="Sprite" parent="clubs"]
+texture = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="clubs"]
+texture = SubResource( 2 )
+
+[node name="3" type="Sprite" parent="clubs"]
+texture = SubResource( 3 )
+
+[node name="4" type="Sprite" parent="clubs"]
+texture = SubResource( 4 )
+
+[node name="5" type="Sprite" parent="clubs"]
+texture = SubResource( 5 )
+
+[node name="6" type="Sprite" parent="clubs"]
+texture = SubResource( 6 )
+
+[node name="7" type="Sprite" parent="clubs"]
+texture = SubResource( 7 )
+
+[node name="8" type="Sprite" parent="clubs"]
+texture = SubResource( 8 )
+
+[node name="9" type="Sprite" parent="clubs"]
+texture = SubResource( 9 )
+
+[node name="10" type="Sprite" parent="clubs"]
+texture = SubResource( 10 )
+
+[node name="Jack" type="Sprite" parent="clubs"]
+texture = SubResource( 11 )
+
+[node name="Queen" type="Sprite" parent="clubs"]
+texture = SubResource( 12 )
+
+[node name="King" type="Sprite" parent="clubs"]
+texture = SubResource( 13 )
+
+[node name="clubs2" type="Node2D" parent="."]
+visible = false
+position = Vector2( 80, 104 )
+
+[node name="Ace" type="Sprite" parent="clubs2"]
+texture = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="clubs2"]
+texture = SubResource( 2 )
+
+[node name="3" type="Sprite" parent="clubs2"]
+texture = SubResource( 3 )
+
+[node name="4" type="Sprite" parent="clubs2"]
+texture = SubResource( 4 )
+
+[node name="5" type="Sprite" parent="clubs2"]
+texture = SubResource( 5 )
+
+[node name="6" type="Sprite" parent="clubs2"]
+texture = SubResource( 6 )
+
+[node name="7" type="Sprite" parent="clubs2"]
+texture = SubResource( 7 )
+
+[node name="8" type="Sprite" parent="clubs2"]
+texture = SubResource( 8 )
+
+[node name="9" type="Sprite" parent="clubs2"]
+texture = SubResource( 9 )
+
+[node name="10" type="Sprite" parent="clubs2"]
+texture = SubResource( 10 )
+
+[node name="Jack" type="Sprite" parent="clubs2"]
+texture = SubResource( 11 )
+
+[node name="Queen" type="Sprite" parent="clubs2"]
+texture = SubResource( 12 )
+
+[node name="King" type="Sprite" parent="clubs2"]
+texture = SubResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 15 )
+anims/end_of_deck = SubResource( 17 )
+anims/picked_animation = SubResource( 16 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 20 )
+anims/throw_card_1 = SubResource( 19 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 165.0
+margin_top = 26.0
+margin_right = 287.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 21 )
+text = "Total Cards: 52/52"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="." to="." method="_on_deck_gui_input"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://packing and conveying/scenes/container/container.gd" type="Script" id=1]
+[ext_resource path="res://packing and conveying/images/pngwing.com (5).png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color( 0, 0, 0, 0.47451 )
+shadow_size = 5
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18, 18 )
+
+[node name="container" type="KinematicBody2D" groups=["container"]]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_right = 35.0
+margin_bottom = 16.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.0509804 )
+margin_left = -32.0
+margin_top = -9.0
+margin_right = 40.0
+margin_bottom = 21.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pngwingcom(5)" type="Sprite" parent="."]
+position = Vector2( 5, -33.9552 )
+scale = Vector2( 0.137313, 0.137313 )
+texture = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 1.72727, -9.18367 )
+scale = Vector2( 0.393939, 0.387755 )
+polygon = PoolVector2Array( -45, -64, 54, -63, 54, 34, -42, 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5, -14 )
+shape = SubResource( 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://coin toss simulation/coin new.png" type="Texture" id=1]
+[ext_resource path="res://coin toss simulation/Helvetica 700_WhatsApp.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Control
+
+
+export var value = \"H\"
+
+func _ready():
+	if value == \"H\":
+		$CoinNew_head.show()
+		$CoinNew_tail.hide()
+		$Label.text = \"HEAD\"
+	else:
+		$CoinNew_head.hide()
+		$CoinNew_tail.show()
+		$Label.text = \"TAIL\"
+"
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 47, 65, 246, 245 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 323, 64, 247, 247 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[node name="coin" type="Control"]
+margin_right = 51.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 76, 76 )
+mouse_filter = 2
+script = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinNew_head" type="Sprite" parent="."]
+position = Vector2( 37.5, 37.5 )
+scale = Vector2( 0.3, 0.3 )
+texture = SubResource( 1 )
+
+[node name="CoinNew_tail" type="Sprite" parent="."]
+position = Vector2( 37.5, 37.5 )
+scale = Vector2( 0.3, 0.3 )
+texture = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -5.0
+margin_right = 24.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 3 )
+text = "HEAD"
+__meta__ = {
+"_edit_use_anchors_": false
+}

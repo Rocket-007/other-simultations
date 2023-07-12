@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/convey_belt/bearing.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 12.0416
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 6.0
+
+[node name="bearing" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -25, -4, 27, -2, 27, 6, -25, 2 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("..")
+node_b = NodePath("../StaticBody2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
