@@ -31,4 +31,10 @@ Packing and Conveying simulation
 
 <img src="https://github.com/Rocket-007/other-simultations/blob/main/github_page_files/pack_convey_ScreenShot.png" alt="" width="50%"/>
 
+<br>
+<b>Controls</b>:
+<br>
+R = restart/reload running Simulation<br>
+1 and 2 = slowdown/speedup Simulation time<br>
+<br>
 
