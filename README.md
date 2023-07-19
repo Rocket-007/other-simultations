@@ -1,5 +1,5 @@
 # other-simultations
-a few other simulations using Godot  
+A few other simulations using Godot  
 
 <br>
 <a href="https://rocket-007.itch.io/simulation-pack"> Demo </a> 
