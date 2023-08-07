@@ -11,6 +11,10 @@ A few other simulations using Godot
 
 Coin Toss simulation  
 
+<img src="https://github.com/Rocket-007/other-simultations/blob/main/github_page_files/simulation pack collage.png" alt="" width="50%"/>
+
+<br>
+
 <img src="https://github.com/Rocket-007/other-simultations/blob/main/github_page_files/coin_toss_ScreenShot.png" alt="" width="50%"/>
 
 <br>
